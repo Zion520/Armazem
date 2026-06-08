@@ -19,9 +19,6 @@ public class MainManager : MonoBehaviour
         LoadColor();
     }
 
-
-//using System.IO;
-
     [System.Serializable]
     class SaveData
     {
@@ -36,7 +33,10 @@ public void SaveColor()
     string json = JsonUtility.ToJson(data);
   
     File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
-}
+
+    // Remova o comentário abaixopara abrire o arquivo JSON no editor 
+    //Application.OpenURL(Application.persistentDataPath + "/savefile.json");
+    }
 public void LoadColor()
 {
     string path = Application.persistentDataPath + "/savefile.json";
