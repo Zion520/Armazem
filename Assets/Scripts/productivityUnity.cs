@@ -10,7 +10,12 @@ public class productivityUnity : Unit
    {
     if (m_currentPile == null)
     {
-        ResourcePile pile 
+        ResourcePile pile = m_Target as ResourcePile;
+        if (pile != null)
+        {
+            m_currentPile = pile;
+            m_currentPile.ProductionSpeed += productivityMultiplier;
+        }
     }
    }
 
