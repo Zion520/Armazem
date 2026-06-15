@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 using System.IO;
 
 public class MainManager : MonoBehaviour
@@ -34,7 +34,7 @@ public void SaveColor()
   
     File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
 
-    // Remova o comentário abaixopara abrire o arquivo JSON no editor 
+    // Remova o comentï¿½rio abaixopara abrire o arquivo JSON no editor 
     //Application.OpenURL(Application.persistentDataPath + "/savefile.json");
     }
 public void LoadColor()
